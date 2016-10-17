@@ -6,6 +6,7 @@
   max-width: 40vw;
 }
 
+/* Actual text bit of MOTD */
 .motd span {
   font-size: 60px;
 }
