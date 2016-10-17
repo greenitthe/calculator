@@ -1,0 +1,185 @@
+/* MOTD */
+.motd {
+  position: relative;
+  top: -20vh;
+  left: 50vw;
+  max-width: 40vw;
+}
+
+.motd span {
+  font-size: 60px;
+}
+
+/* Arm Wave */
+.skeleton-arm {
+  width: 35vh;
+  animation: wavingArm 2s ease-in-out infinite;
+  top: 48vh;
+  left: 51vw;
+  position: relative;
+  transform-origin: right center;
+}
+@keyframes wavingArm {
+  0% {
+    transform: rotate(50deg) translate(0px);
+  }
+  50% {
+    transform: rotate(80deg) translate(0px);
+  }
+  100% {
+    transform: rotate(50deg) translate(0px);
+  }
+}
+
+.skeleton {
+  top: 65vh;
+  left: 50vw;
+  position: relative;
+  height: 35vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font: bold 14px Arial, sans-serif;
+}
+
+html {
+  height: 100%;
+  background: black;
+  background: radial-gradient(circle, #888888 20%, #303030);
+  background-size: cover;
+}
+
+#calculator {
+  width: 325px;
+  height: auto;
+  top: 50px;
+  position: absolute;
+
+  margin: 0 50px;
+  padding: 20px 20px 9px;
+
+  background: #f9c670;
+  background: linear-gradient(#f9c670, #e3bb76);
+	border-radius: 3px;
+}
+
+/* Top portion */
+.top span.clear {
+	float: left;
+}
+
+/* Inset shadow on the screen to create indent */
+.top .screen {
+	height: 40px;
+	width: 212px;
+
+	float: right;
+
+	padding: 0 10px;
+
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+
+
+	/* Typography */
+	font-size: 17px;
+	line-height: 40px;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+/* Clear floats */
+.keys, .top {overflow: hidden;}
+
+/* Applying same to the keys */
+.keys span, .top span.clear {
+	float: left;
+	position: relative;
+	top: 0;
+
+	cursor: pointer;
+
+	width: 66px;
+	height: 36px;
+
+	background: white;
+	border-radius: 3px;
+
+	margin: 0 7px 11px 0;
+
+	color: #888;
+	line-height: 36px;
+	text-align: center;
+
+	/* prevent selection of text inside keys */
+	user-select: none;
+
+	/* Smoothing out hover and active states using css3 transitions */
+	transition: all 0.2s ease;
+}
+
+/* Remove right margins from operator keys */
+/* style different type of keys (operators/evaluate/clear) differently */
+.keys span.operator {
+	background: #404040;
+  color: #fff;
+	margin-right: 0;
+}
+
+.keys span.eval {
+	background: #ffa814;
+	color: #454545;
+}
+
+.top span.clear {
+	background: #ffa814;
+	color: #454545;
+}
+
+/* Some hover effects */
+.keys span:hover {
+	background: #616162;
+	color: white;
+}
+
+.keys span.eval:hover {
+	background: #404040;
+	color: #ffffff;
+}
+
+.top span.clear:hover {
+	background: #404040;
+	color: #ffffff;
+}
+
+.keys span.operator:hover {
+	background: #ffa814;
+	color: #454545;
+}
+
+/* Active */
+.keys span:active {
+  transition: none;
+	background-color: #fff;
+}
+
+.keys span.eval:active {
+  transition: none;
+	background-color: #fff;
+}
+
+.top span.clear:active {
+  transition: none;
+	background-color: #fff;
+}
+
+.keys span.operator:active {
+  transition: none;
+  background-color: #000;
+}
