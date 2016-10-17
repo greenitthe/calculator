@@ -136,7 +136,7 @@ for(var i = 0; i < keys.length; i++) {
 				equation = equation.replace(/.$/, '');
 
 			if(equation)
-				input.innerHTML = eval(equation);
+				input.innerHTML = math.eval(equation);
 
 			decimalAdded = false;
 		}
